@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Tarun's Portfolio</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,14 +17,14 @@
       margin-bottom: 10px;
     }
 
-    p {
-      margin-top: 0;
-      line-height: 1.6;
-    }
-
     h2 {
       margin-top: 40px;
       color: #333;
+    }
+
+    p {
+      margin-top: 0;
+      line-height: 1.6;
     }
 
     /* GRID LAYOUT */
@@ -40,28 +42,29 @@
       }
     }
 
+    /* PROJECT CARD */
     .project-card {
       background: white;
-      padding: 18px;
-      border-radius: 12px;
+      padding: 14px;
+      border-radius: 10px;
       border: 1px solid #ddd;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
     }
 
     .project-card h3 {
       margin: 0;
+      font-size: 18px;
       color: #111;
-      font-size: 20px;
     }
 
-    /* Screenshot */
+    /* SCREENSHOT */
     .project-image {
       width: 100%;
-      height: 180px;
-      border-radius: 10px;
+      height: 140px;
+      border-radius: 8px;
       border: 1px solid #e6e6e6;
       overflow: hidden;
       background: #f2f2f2;
@@ -74,20 +77,18 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    /* Tags */
+    /* TAGS */
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 2px;
+      gap: 6px;
     }
 
     .tag {
-      font-size: 12px;
-      padding: 6px 10px;
+      font-size: 11px;
+      padding: 4px 8px;
       border-radius: 999px;
       background: #f1f5ff;
       border: 1px solid #dbe6ff;
@@ -95,19 +96,21 @@
       font-weight: 600;
     }
 
-    /* Tech line */
+    /* TECH LINE */
     .tech {
-      font-size: 13px;
+      font-size: 12px;
       color: #555;
       margin: 0;
     }
 
+    /* DESCRIPTION */
     .desc {
+      font-size: 14px;
+      line-height: 1.5;
       margin: 0;
-      line-height: 1.55;
-      color: #222;
     }
 
+    /* LINK */
     .project-card a {
       color: #0366d6;
       font-weight: bold;
@@ -119,24 +122,58 @@
     .project-card a:hover {
       text-decoration: underline;
     }
+
+    /* FEATURED PROJECT (Light Chaser) */
+    .project-card:first-child {
+      border: 2px solid #0366d6;
+    }
   </style>
 </head>
 
 <body>
 
   <h1>Hello, I'm Tarun!</h1>
-  <p>Welcome to my GitHub portfolio website. Here are a few projects I've built across embedded systems and software.</p>
+  <p>
+    Welcome to my GitHub portfolio website. Here are a few projects I've built
+    across embedded systems and software.
+  </p>
 
   <h2>My Projects</h2>
 
   <div class="projects">
 
-    <!-- Arduino Game Project -->
+    <!-- LIGHT CHASER (FEATURED) -->
+    <div class="project-card">
+      <h3>Light Chaser Game Project</h3>
+
+      <div class="project-image">
+        <img src="images/light-chaser.png" alt="Light Chaser Screenshot">
+      </div>
+
+      <div class="tags">
+        <span class="tag">Embedded</span>
+        <span class="tag">C</span>
+        <span class="tag">GPIO</span>
+        <span class="tag">Real-Time</span>
+      </div>
+
+      <p class="tech"><b>Technologies:</b> C, GPIO, Timers, Interrupts, Debouncing</p>
+
+      <p class="desc">
+        Built a reaction-based LED chase game using low-level microcontroller programming.
+        Implemented timed LED sequencing, responsive button input, and stable debouncing.
+      </p>
+
+      <a href="https://github.com/vypearr/Light_Chaser" target="_blank">
+        View Repository →
+      </a>
+    </div>
+
+    <!-- ARDUINO GAME -->
     <div class="project-card">
       <h3>Arduino Game Project</h3>
 
       <div class="project-image">
-        <!-- Replace the src with your screenshot path -->
         <img src="images/arduino-game.png" alt="Arduino Game Screenshot">
       </div>
 
@@ -150,8 +187,8 @@
       <p class="tech"><b>Technologies:</b> Arduino, C/C++, Joystick, LCD, Buzzer</p>
 
       <p class="desc">
-        Built a joystick-controlled target game with real-time input handling, LCD rendering, and sound feedback.
-        Implemented core game logic, scoring, and interactive gameplay on an Arduino microcontroller.
+        Built a joystick-controlled target game with real-time input handling,
+        LCD rendering, and sound feedback on an Arduino microcontroller.
       </p>
 
       <a href="https://github.com/vypearr/ArduinoGameProject" target="_blank">
@@ -159,12 +196,11 @@
       </a>
     </div>
 
-    <!-- BookieBets Bots Project -->
+    <!-- BOOKIEBETS -->
     <div class="project-card">
       <h3>BookieBets Bots Project</h3>
 
       <div class="project-image">
-        <!-- Replace the src with your screenshot path -->
         <img src="images/bookiebets-bots.png" alt="BookieBets Bots Screenshot">
       </div>
 
@@ -175,42 +211,14 @@
         <span class="tag">Games</span>
       </div>
 
-      <p class="tech"><b>Technologies:</b> JavaScript, Discord API, Bot Commands, Game Logic</p>
+      <p class="tech"><b>Technologies:</b> JavaScript, Discord API, Bot Commands</p>
 
       <p class="desc">
-        Developed a Discord bot system that manages multiple mini-games with persistent tab/currency logic.
-        Implemented structured commands and modular game features including CoinFlip and Crash.
+        Developed a Discord bot system managing multiple mini-games with persistent
+        tab and currency logic, including CoinFlip and Crash.
       </p>
 
       <a href="https://github.com/vypearr/BookieBets-Bots" target="_blank">
-        View Repository →
-      </a>
-    </div>
-
-    <!-- Light Chaser Game Project -->
-    <div class="project-card">
-      <h3>Light Chaser Game Project</h3>
-
-      <div class="project-image">
-        <!-- Replace the src with your screenshot path -->
-        <img src="images/light-chaser.png" alt="Light Chaser Screenshot">
-      </div>
-
-      <div class="tags">
-        <span class="tag">Embedded</span>
-        <span class="tag">Microcontrollers</span>
-        <span class="tag">Real-Time</span>
-        <span class="tag">C</span>
-      </div>
-
-      <p class="tech"><b>Technologies:</b> C, GPIO, Timers, Interrupts, Debouncing</p>
-
-      <p class="desc">
-        Built a reaction-based LED chase game using low-level microcontroller programming.
-        Implemented timed LED sequencing, responsive button input, and stable debouncing for accurate gameplay.
-      </p>
-
-      <a href="https://github.com/addysfsu/Light_Chaser" target="_blank">
         View Repository →
       </a>
     </div>
